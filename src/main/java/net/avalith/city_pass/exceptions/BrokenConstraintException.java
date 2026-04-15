@@ -5,4 +5,3 @@ public class BrokenConstraintException extends RuntimeException {
         super(message);
     }
 }
-

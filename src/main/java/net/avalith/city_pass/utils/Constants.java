@@ -6,6 +6,7 @@ public class Constants {
     public static final String THEATERPLAY_REMAINING_TICKET = "We do not have that quantity. Remaining of tickets : ";
     public static final String THEATERPLAY_TICKET_NOT_VALID = "TheaterPlay Ticket quantity is not valid -> ";
     public static final String CITY_NOT_FOUND_MESSAGE = "City not found";
+    public static final String CITY_NAME_ALREADY_USED_MESSAGE = "That name for the city is already used";
     public static final String ROLE_NOT_FOUND_MESSAGE = "Role not found";
     public static final String USER_NOT_FOUND_MESSAGE = "User not found";
     public static final String CITY_PASS_NOT_FOUND_MESSAGE = "City pass not found";
@@ -15,5 +16,4 @@ public class Constants {
     public static final String THEATERPLAY_NOT_FOUND_MESSAGE = "TheaterPlay not found";
     public static final String PURCHASE_NOT_FOUND_MESSAGE = "Purchase not found";
     public static final String PAYPAL_API_ERROR_MESSAGE = "There has been a problem during the approval of the payment";
-
 }

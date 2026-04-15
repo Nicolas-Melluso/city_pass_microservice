@@ -21,7 +21,7 @@ public class CityDto {
 
     public static CityDto fromCity(City city){
         return CityDto.builder()
-                .id(city.getIdCity())
+                .id(city.getId())
                 .name(city.getName())
                 .build();
     }

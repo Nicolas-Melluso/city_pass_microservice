@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import net.avalith.city_pass.dto.CityDto;
 import net.avalith.city_pass.dto.response.ListCityDto;
+import net.avalith.city_pass.exceptions.CityNameAlreadyUsedException;
 import net.avalith.city_pass.models.City;
 import net.avalith.city_pass.services.CityService;
 import org.springframework.http.HttpStatus;
@@ -62,7 +63,7 @@ public class CityController {
             @ApiResponse(code = 200, message = "Succes on Create a City"),
             @ApiResponse(code = 201, message = "Create a City Successfully")})
     @PostMapping("")
-    public ResponseEntity<CityDto> createCity(@Valid @RequestBody CityDto cityDto ){
+    public ResponseEntity<CityDto> createCity(@Valid @RequestBody CityDto cityDto ) throws CityNameAlreadyUsedException {
         City city = cityService.createCity(cityDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(CityDto.fromCity(city));
     }
@@ -70,7 +71,7 @@ public class CityController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "City Update Correctly")})
     @PutMapping("/{idCity}")
-    public ResponseEntity<CityDto> updateCity(@PathVariable(name = "idCity")Integer idCity, @Valid @RequestBody CityDto cityDto){
+    public ResponseEntity<CityDto> updateCity(@PathVariable(name = "idCity")Integer idCity, @Valid @RequestBody CityDto cityDto) throws CityNameAlreadyUsedException {
         City city = cityService.updateCity(idCity,cityDto);
         return ResponseEntity.ok(CityDto.fromCity(city));
     }
