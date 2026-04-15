@@ -38,8 +38,8 @@ public class CityService {
                 .orElseThrow(CityNotFoundException::new);
     }
 
-    public City getById(Integer idCity) {
-        return cityRepository.findByIdAndIsActive(idCity, Boolean.TRUE)
+    public City getById(Integer id) {
+        return cityRepository.findByIdAndIsActive(id, Boolean.TRUE)
                 .orElseThrow(CityNotFoundException::new);
     }
 

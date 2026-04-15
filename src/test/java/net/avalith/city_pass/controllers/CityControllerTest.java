@@ -1,7 +1,7 @@
 package net.avalith.city_pass.controllers;
 
 import net.avalith.city_pass.dto.CityDto;
-import net.avalith.city_pass.dto.ListCityDto;
+import net.avalith.city_pass.dto.response.ListCityDto;
 import net.avalith.city_pass.exceptions.CityNameAlreadyUsedException;
 import net.avalith.city_pass.exceptions.CityNotFoundException;
 import net.avalith.city_pass.models.City;

@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Repository
 public interface CityRepository extends JpaRepository<City,Integer> {
-    Optional<City> findByIdAndIsActive(Integer idCity, Boolean aTrue);
+    Optional<City> findByIdAndIsActive(Integer id, Boolean aTrue);
 
     List<City> findAllByIsActive(Boolean status);
 
