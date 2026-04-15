@@ -36,7 +36,7 @@ public class CityPassServiceTest {
 
     public void getOneCityPassUsingGetAll() {
         City city = City.builder()
-                .idCity(1)
+                .id(1)
                 .name("Mar del plata")
                 .isActive(Boolean.TRUE)
                 .build();
@@ -60,7 +60,7 @@ public class CityPassServiceTest {
     @Test
     public void createNewCityPassSuccessfully() {
         City city = City.builder()
-                .idCity(1)
+                .id(1)
                 .name("Mar del plata")
                 .isActive(Boolean.TRUE)
                 .build();
@@ -106,7 +106,7 @@ public class CityPassServiceTest {
     @Test
     public void getByIdSuccessfully() {
         City city = City.builder()
-                .idCity(1)
+                .id(1)
                 .name("Mar del plata")
                 .isActive(Boolean.TRUE)
                 .build();
